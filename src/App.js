@@ -9,6 +9,12 @@ function App() {
   const [ text, setText ] = useState('')
   const [ favorites, setFavorites ] = useState([])
 
+  const favoriteInput = useRef(null)
+
+  useEffect(() => {
+    favoriteInput.current.focus()
+  })
+
   const handleChange = (e) => setText(e.target.value)
 
   const handleSubmit = (e) => {
@@ -27,7 +33,7 @@ function App() {
         <img src='https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg' alt='a red heart' class='heart' />
         <form onSubmit={handleSubmit}>
           <label htmlFor='favorite-input'>Favorite</label>
-          <input id='favorite-input' type='text' value={text} onChange={handleChange} />
+          <input ref={favoriteInput} id='favorite-input' type='text' value={text} onChange={handleChange} />
           <button>Add Favorite</button>
         </form>
         <ul>
