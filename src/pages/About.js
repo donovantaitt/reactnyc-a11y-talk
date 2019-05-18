@@ -1,15 +1,9 @@
-import { Helmet } from 'react-helmet'
 import React from 'react'
+import useTitle from '../useTitle';
 
 const About = (props) => {
-    return(
-        <>
-            <h1>About</h1>
-            <Helmet>
-                <title>{props.title}</title>
-            </Helmet>
-        </>
-    )
+    useTitle(props.title)
+    return <h1>About</h1>
 }
 
 export default About

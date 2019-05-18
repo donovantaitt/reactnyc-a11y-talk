@@ -1,15 +1,9 @@
-import { Helmet } from 'react-helmet'
 import React from 'react'
+import useTitle from '../useTitle';
 
 const Contact = (props) => {
-    return(
-        <>
-            <h1>Contact</h1>
-            <Helmet>
-                <title>{props.title}</title>
-            </Helmet>
-        </>
-    )
+    useTitle(props.title)
+    return <h1>Contact</h1>
 }
 
 export default Contact
