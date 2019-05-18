@@ -21,9 +21,9 @@ function App() {
       </header>
       <main>
         <Switch>
-          <Route exact path='/' render={() => <Home title={'Home'} />} />
-          <Route path='/contact' render={() => <Contact title={'Contact'} />}  />
-          <Route path='/about' render={() => <About title={'About'} />}  />
+          <Route exact path='/' component={Home} />
+          <Route path='/contact' component={Contact}  />
+          <Route path='/about' component={About}  />
         </Switch>
       </main>
     </div>

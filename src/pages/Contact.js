@@ -1,8 +1,6 @@
 import React from 'react'
-import useTitle from '../useTitle';
 
-const Contact = (props) => {
-    useTitle(props.title)
+const Contact = () => {
     return <h1>Contact</h1>
 }
 
