@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     favoriteInput.current.focus()
-  })
+  }, [])
 
   const handleChange = (e) => setText(e.target.value)
 
