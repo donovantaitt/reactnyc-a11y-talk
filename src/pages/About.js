@@ -1,9 +1,13 @@
-import React from 'react'
-import useTitle from '../useTitle';
+import React, { useEffect } from 'react'
 
 const About = (props) => {
-    useTitle(props.title)
+    
+    useEffect(() => {
+        document.title = props.title
+    }, [])
+
     return <h1>About</h1>
+    
 }
 
 export default About
